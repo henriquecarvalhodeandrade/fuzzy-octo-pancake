@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cherrytree>
+  <node unique_id="1" master_id="0" name="Kali Linux Basic Commands" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1786996551" ts_lastsave="1787003168">
+    <rich_text>pwd -&gt; Present Working Directory ou Print Working Directory. Comando para descobrirmos qual diretório/pasta estamos no momento.
+Ex: (no terminal)
+	
+	# pwd
+	-&gt; /home/henrique
+ 
+ ===
+ cd -&gt; Change Directory. Comando para mudarmos de diretório/pasta.
+ Ex: Voltar ao direório anterior (sair da pasta que estamos)
+ 
+ # cd ..
+ -&gt; /home
+ # cd ..
+ -&gt; /
+ 
+ # cd home/
+ # cd henrique/
+ 
+ @kali /home/henrique
+ 
+ 
+ ===
+ ls -&gt; List. Esse comando lista todos os arquivos que temos no diretório em que estamos.
+ Ex: 
+ 
+ # ls
+ -&gt; bin   etc         initrd.img.old  lost+found  opt   run   sys  var
+boot  home        lib             media       proc  sbin  tmp  vmlinuz
+dev   initrd.img  lib64           mnt         root  srv   usr  vmlinuz.old
+
+# cd home/henrique
+@kali home/henrique
+# ls
+→ Desktop    Downloads  Pictures  Public     Videos
+Documents  Music      Projects  Templates
+
+Não podemos acessar pastas/diretórios que pertencem a outro lugar de forma direta, mas podemos sair de uma pasta e ir para outra usando o comando pelo terminal:
+Ex:
+
+# cd /etc/
+@kali etc/
+
+Podemos fazer algo parecido com o comando de listar também.
+Ex:
+
+# cd /home/henrique
+@kali home/henrique
+
+# ls /etc/
+→ adduser.conf              ipsec.d             rc0.d
+adjtime                   ipsec.secrets       rc1.d
+alternatives              issue               rc2.d
+apache2                   issue.net           rc3.d
+apparmor                  java-25-openjdk     rc4.d
+apparmor.d                john                rc5.d
+apt                       kali-menu           rc6.d
+arp-scan                  kernel              rcS.d
+avahi                     kernel-img.conf     reader.conf.d
+bash.bashrc               keyutils            rearj.cfg
+bash_completion           kismet              redis
+bash_completion.d         ldap                redsocks.conf
+bindresvport.blacklist    ld.so.cache         request-key.conf
+binfmt.d                  ld.so.conf          request-key.d
+bluetooth                 ld.so.conf.d        resolv.conf
+ca-certificates           legion.conf         responder
+ca-certificates.conf      libao.conf          rmt
+chatscripts               libaudit.conf       rpc
+chromium                  libblockdev         runit
+chromium.d                libccid_Info.plist  samba
+cifs-utils                libnl-3             sane.d
+cloud                     libpaper.d          scalpel
+colord                    lightdm             screenrc
+console-setup             lighttpd            sddm.conf.d
+cracklib                  locale.conf         searchsploit_rc
+credstore                 locale.gen          security
+credstore.encrypted       localtime           selinux
+cron.d                    logcheck            sensors3.conf
+cron.daily                login.defs          sensors.d
+cron.hourly               logrotate.conf      services
+cron.monthly              logrotate.d         sgml
+crontab                   macchanger          shadow
+cron.weekly               machine-id          shadow-
+cron.yearly               magic               shells
+cryptsetup-initramfs      magic.mime          skel
+cryptsetup-nuke-password  manpath.config      smartd.conf
+crypttab                  matplotlibrc        smartmontools
+dbus-1                    mime.types          smi.conf
+dconf                     minicom             snmp
+debconf.conf              miredo              speech-dispatcher
+debian_version            miredo.conf         sqlmap
+default                   mke2fs.conf         ssh
+deluser.conf              ModemManager        ssl
+depmod.d                  modprobe.d          sslsplit
+dhcp                      modules             strongswan.conf
+dhcpcd.conf               modules-load.d      strongswan.d
+dictionaries-common       mosquitto           stunnel
+doc-base                  motd                subgid
+dpkg                      mtab                subgid-
+e2scrub.conf              mysql               subuid
+eac                       nanorc              subuid-
+emacs                     netconfig           subversion
+environment               netsniff-ng         sudo.conf
+environment.d             network             sudoers
+ethertypes                NetworkManager      sudoers.d
+ettercap                  networks            sudo_logsrvd.conf
+feroxbuster               nfs.conf            supercat
+firebird                  nfs.conf.d          sv
+firefox-esr               nftables.conf       sysctl.d
+fonts                     nginx               systemd
+freetds                   nikto.conf          terminfo
+fstab                     nsisconf.nsh        texmf
+fuse.conf                 nsswitch.conf       theHarvester
+gai.conf                  ODBCDataSources     tightvncserver.conf
+geoclue                   odbc.ini            timidity
+ghostscript               odbcinst.ini        tmpfiles.d
+glvnd                     openal              tpm2-tss
+gnome-system-tools        OpenCL              ts.conf
+gophish                   openni2             ucf.conf
+gprofng.rc                opensc              udev
+groff                     openvas             udisks2
+group                     openvpn             ufw
+group-                    opt                 unicornscan
+grub.d                    os-release          updatedb.conf
+gshadow                   pam.conf            update-motd.d
+gshadow-                  pam.d               UPower
+gss                       paperspecs          usb_modeswitch.conf
+gtk-2.0                   passwd              usb_modeswitch.d
+gtk-3.0                   passwd-             vconsole.conf
+guymager                  perl                vdpau_wrapper.cfg
+gvm                       php                 vim
+hdparm.conf               plymouth            vpnc
+host.conf                 polkit-1            vulkan
+hostname                  postgresql          wgetrc
+hosts                     postgresql-common   wireshark
+hosts.allow               powershell-empire   wpa_supplicant
+hosts.deny                ppp                 X11
+idmapd.conf               profile             xattr.conf
+ifplugd                   profile.d           xdg
+ImageMagick-7             protocols           xemacs21
+inetsim                   proxychains4.conf   xfce4
+init.d                    pulse               xml
+initramfs-tools           python2.7           xrdp
+inputrc                   python3             zsh
+insserv.conf.d            python3.13          zsh_command_not_found
+ipp-usb                   python3.14
+ipsec.conf                radcli
+
+No linux, a entrada é case-sensitive, ou seja, ele detecta de voce escerver Home de home, ele percebe essa diferença, entao ao digitar por uma pasta, tente escrever com as letras corretas antes de usar o autocomplete (tab) para procurar ela correspondentemente.
+
+A pasta do usuário normalmente é retratada como "~". Por isso se estivermos no diretório ~/Desktop/, podemos ir para Music, da seguinte forma:
+ex: 
+
+#pwd
+→ home/henrique/Desktop
+
+# cd ~/Music
+@kali home/henrique/Music
+
+Se eu estiver dentro de Music e querer voltar para para Desktop, eu posso usar o comando cd e juntamente com tab para autocompletar. Porem existe mais de uma pasta que começa com "D" em ~/. Logo então podemos pressionar tab 2 vezes para mostrar os diretórios que comçam com "D".
+Ex:
+
+# cd ..
+@kali home/henrique
+
+# cd D (pressione tab  2 vezes)
+
+→ Completing local directory
+Desktop/    Documents/  Downloads/
+
+===
+
+→ mkdir: Make Directory. Comando usado para criarmos uma pasta nova, um diretório novo.
+Ex:
+
+# cd ~/
+# mkdir Fotos_da_familia
+# ls
+→ Desktop  Documents  Downloads  </rich_text>
+    <rich_text background="#e5a50a">Fotos_da_familia</rich_text>
+    <rich_text>  Music  Pictures  Projects  Public  Templates  Videos
+
+===
+
+→ rmdir: Remove Directory. Comando para remover o diretório. 
+Ex:
+
+# cd ..
+# rmdir Fotos_da_familia/
+# ls
+→ Desktop  Documents  Downloads Music  Pictures  Projects  Public  Templates  Videos
+
+===
+
+Eu posso listar todos os arquivos e os arquivos ocultos com:
+
+# ls -la
+
+E podemos entrar nestas pastas ocultas e listar seus arquivos também:
+
+# cd .cache/
+@kali home/henrique/.cache/
+# ls -la
+→ total 108
+drwxrwxr-x  11 henrique henrique  4096 Aug 17 16:39 .
+drwx------  18 henrique henrique  4096 Aug 17 17:42 ..
+-rw-r--r--   1 henrique henrique 12288 Aug 17 15:35 event-sound-cache.tdb.0db6f895261649a08f3c051f5d406a9c.x86_64-pc-linux-gnu
+drwxr-xr-x   2 henrique henrique  4096 Aug 17 16:01 fontconfig
+drwxrwxr-x   3 henrique henrique  4096 Aug 17 14:59 glycin
+drwxrwxr-x   2 henrique henrique  4096 Aug 17 15:12 gstreamer-1.0
+drwx------ 119 henrique henrique  4096 Aug 17 16:22 mesa_shader_cache
+drwx------   3 henrique henrique  4096 Aug 17 15:07 mozilla
+drwx------   2 henrique henrique  4096 Aug 17 14:59 obexd
+drwx------   3 henrique henrique  4096 Aug 17 15:12 sessions
+drwx------   3 henrique henrique  4096 Aug 17 15:18 thumbnails
+drwxrwxr-x   3 henrique henrique  4096 Aug 17 14:59 xfce4
+-rw-rw-r--   1 henrique henrique 51114 Aug 17 16:39 zcompdump
+
+===
+
+cp: Copy. Comando que copia um arquivo para uma determinada localização. (ctrl + c  e  ctrl + v)
+Ex: &lt;comando&gt; &lt;arquivo&gt; &lt;localizaçao a ser enviado&gt;
+
+# cp   arquivo_exemplo.txt   Downloads/
+
+===
+
+rm: Remove. Remove tanto arquivos como também diretórios (para remover diretórios não vazios devemos usar flags)
+Ex:
+
+# rm Downloads/arquivo_exemplo.txt 
+
+Podemos usar as setas do teclado para navegar entre os comandos que escrevemos anteriormente
+
+===
+
+mv: Move. Comando usado para mover arquivos, sem fazer uma cópia deles. (ctrl + x  e  ctrl + v)
+Ex:
+
+# mv arquivo_exemplo.txt Downloads/
+# ls Downloads/
+→ arquivo_exemplo.txt
+
+===
+
+locate: Locate (something). Localiza algo pelo nome seja um arquivo, um executavel, uma pasta, enfim...
+ex:
+
+# locate bash
+
+Ele vai mostrar tudo o possui "bash" no sistema.
+
+===
+
+updatedb: Update Database. Atualiza o banco de dados, isto é, atualiza os arquivos do seu sistema, para que voce possa usar o comando locate. Entao: se voce criar um arquivo e tentar usar o locate, o sistema nao o encontrara. Por isso voce deve atualizar o sistema com o updatedb para isso.
+ex:
+
+# updatedb
+
+===
+
+passwd: Change User Password. Muda a senha para fazer o loguin daquele usuário.
+ex:
+
+# passwd
+→ Enter new UNIX password:
+→ Retype new UNIX password:
+→ passwd: password updated successfully
+
+===
+
+man: All information about a specific command. Retorna um conjunto de informaçoes sobre um desejado comando, útil para quando queremos saber quais comandos utilzam flags, o que tal comando irá fazer e entre essas coisas.
+ex:
+
+# man ls
+
+
+===
+ls --help: List help slim info. Mostra algumas informaçoes importantes, mas nao todas assim como o comando "man".
+ex:
+
+# ls --help 
+
+
+
+
+
+
+
+
+
+</rich_text>
+  </node>
+</cherrytree>

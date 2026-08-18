@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cherrytree>
+  <node unique_id="2" master_id="0" name="Kali Linux Intermediate Commands" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1787003168" ts_lastsave="1787011023">
+    <rich_text>Ao rodarmos o comando: ls -la (na pasta "/") a saida será algo como:
+
+→ total 80
+drwxr-xr-x  19 root root  4096 Aug 17 15:21 .
+drwxr-xr-x  19 root root  4096 Aug 17 15:21 ..
+-rw-------   1 root root    70 Aug 17 11:58 .bash_history
+lrwxrwxrwx   1 root root     7 Aug 17 13:52 bin -&gt; usr/bin
+drwxr-xr-x   4 root root  4096 Aug 17 16:06 boot
+drwx------   2 root root  4096 Aug 17 14:50 .cache
+drwxr-xr-x  19 root root  3600 Aug 17 14:58 dev
+drwxr-xr-x 183 root root 12288 Aug 17 16:05 etc
+drwxr-xr-x   3 root root  4096 Aug 17 14:51 home
+lrwxrwxrwx   1 root root    33 Aug 17 15:21 initrd.img -&gt; boot/initrd.img-7.0.12+kali-amd64
+lrwxrwxrwx   1 root root    34 Aug 17 13:57 initrd.img.old -&gt; boot/initrd.img-6.19.14+kali-amd64
+lrwxrwxrwx   1 root root     7 Aug 17 13:52 lib -&gt; usr/lib
+lrwxrwxrwx   1 root root     9 Aug 17 13:52 lib64 -&gt; usr/lib64
+drwx------   2 root root 16384 Aug 17 13:52 lost+found
+drwxr-xr-x   3 root root  4096 Aug 17 13:57 media
+drwxr-xr-x   2 root root  4096 Aug 17 13:52 mnt
+drwxr-xr-x   3 root root  4096 Aug 17 15:45 opt
+dr-xr-xr-x 387 root root     0 Aug 17 11:57 proc
+drwx------   4 root root  4096 Aug 17 14:53 root
+drwxr-xr-x  46 root root  1100 Aug 17 16:05 run
+lrwxrwxrwx   1 root root     8 Aug 17 13:52 sbin -&gt; usr/sbin
+drwxr-xr-x   3 root root  4096 Aug 17 15:20 srv
+dr-xr-xr-x  13 root root     0 Aug 17 11:57 sys
+drwxrwxrwt  16 root root   420 Aug 17 18:48 tmp
+drwxr-xr-x  14 root root  4096 Aug 17 15:10 usr
+drwxr-xr-x  12 root root  4096 Aug 17 15:08 var
+lrwxrwxrwx   1 root root    30 Aug 17 15:21 vmlinuz -&gt; boot/vmlinuz-7.0.12+kali-amd64
+lrwxrwxrwx   1 root root    31 Aug 17 13:57 vmlinuz.old -&gt; boot/vmlinuz-6.19.14+kali-amd64
+
+Vamos tentar entender o que cada coisa que vemos aí significa.
+
+→ tudo o que começa com um hífen "-" significa que é um arquivo.
+→ tudo o que começa com "d" é um diretório. 
+→ Primeiro grupo de caracteres:
+   ⇒ "rwx" significa read, write e execute. São as permissoes que determinado pacote possui.
+→ Segundo grupo de caracteres:
+   ⇒ "r-x" sifnifica que aqueles que estao nesse grupo podem apenas ler e executar programas.
+→ Terceiro grupo (refere-se aos usuários):
+   ⇒ "r-x", por exemplo, os usuários poderao apenas ler e executar.
+
+Veja a listagem da pasta /tmp/:
+
+# ls -la /temp/
+→ total 3872
+drwxrwxrwt 16 root     root         420 Aug 17 20:26 .
+drwxr-xr-x 19 root     root        4096 Aug 17 15:21 ..
+drwx------  2 henrique henrique      40 Aug 17 17:21 .1PG7T3
+drwx------  2 root     root       30120 Aug 17 15:06 apt-dpkg-install-aDl9SH
+-rw-------  1 henrique henrique       0 Aug 17 14:59 config-err-FlGmV6
+-rw-------  1 henrique henrique       0 Aug 17 15:12 config-err-m896eZ
+-rw-rw-r--  1 henrique henrique 3952128 Aug 17 15:08 df3d9a3f-23a0-404a-a3de-c92dd63ed2eb.zip
+drwxr-xr-x  2 root     root          40 Aug 17 15:55 dotnet-installer
+drwxrwxrwt  2 root     root          40 Aug 17 14:58 .font-unix
+drwxr-xr-x  2 root     root          40 Aug 17 15:25 hsperfdata_root
+drwxrwxrwt  2 root     root          80 Aug 17 15:12 .ICE-unix
+drwx------  3 root     root          60 Aug 17 14:59 systemd-private-a08712898f384884a2cb0befbaf43387-colord.service-jCj4db
+drwx------  3 root     root          60 Aug 17 14:58 systemd-private-a08712898f384884a2cb0befbaf43387-ModemManager.service-ueSoBG
+drwx------  3 root     root          60 Aug 17 15:12 systemd-private-a08712898f384884a2cb0befbaf43387-pcscd.service-BXnHIx
+drwx------  3 root     root          60 Aug 17 14:58 systemd-private-a08712898f384884a2cb0befbaf43387-polkit.service-mttywv
+drwx------  3 root     root          60 Aug 17 14:58 systemd-private-a08712898f384884a2cb0befbaf43387-systemd-logind.service-7j8ANY
+drwx------  3 root     root          60 Aug 17 14:59 systemd-private-a08712898f384884a2cb0befbaf43387-upower.service-r8hZFD
+-r--r--r--  1 root     root          11 Aug 17 15:12 .X0-lock
+drwxrwxrwt  2 root     root          60 Aug 17 15:12 .X11-unix
+-rw-------  1 henrique henrique     402 Aug 17 15:12 .xfsm-ICE-R362T3
+drwxrwxrwt  2 root     root          40 Aug 17 14:58 .XIM-unix
+
+
+Perceba que existem diversos arquivos que te dao permissao total -&gt; "drwxrwxrwt"
+
+Mas como mudamos o nível de acesso de um arquivo ou diretório?
+
+===
+
+echo: Creates a file. Cria um arquivo e podemos inserir informaçoes neste arquivo por linha de comando.
+ex:
+
+# cd ~/
+# echo "hello" &gt; hello.txt
+# ls -la
+→ (linha que nos interessa):
+	-rw-rw-r--  1 henrique henrique     6 Aug 17 20:31 hello.txt
+
+Nós podemos ler e escrever, mas nao podemos executar esse arquivo.
+
+=== 
+
+cat: Catch. Recupera e informa os dados presentes no arquivo.
+ex:
+
+# cat hello.txt
+→ hello
+
+===
+
+chmod: Change Mode. Muda o nível de permissao/acesso do arquivo, respondendo á nossa pergunta anterior.
+ex:
+
+# chmod 777 hello.txt
+#  ls -la hello.txt
+→  -rwxrwxrwx 1 henrique henrique 6 Aug 17 20:31 hello.txt
+
+Perceba que mudamos o nível de acesso que tenhamos neste arquivo.
+"777" é o nivel paradizer permissao total para read, write e execute. Poderiamos ter usado "chmod + rwx" no lugar de "chmod 777"!
+
+===
+
+adduser: Add a new user. Podemos adicionar novos usuários no nosso sitema.
+Ex:
+
+# cd ..
+# cd /
+# adduser rique
+# cat /etc/passwd
+→ (linha que nos interessa):
+	rique:x:1001:1001:Rique,,,:/home/rique:/bin/bash
+
+Perceba que o usuário "rique" foi criado!
+
+===
+
+sudo: Admin acess. Permite que voce rode comandos ao nivel de administrador (voce deve saber a senha, se requisitado).
+ex:
+
+===
+
+As senhas nao ficam mais salvas no caminho:  /etc/passswd. Agora elas ficam criptografadas no caminho /etc/shadow
+
+sudo: Admin acess. Permite que voce rode comandos ao nivel de administrador (voce deve saber a senha, se requisitado).
+ex:
+
+# cat /etc/shadow
+→ </rich_text>
+    <rich_text background="#e5a50a">sudo</rich_text>
+    <rich_text> cat /etc/shadow
+root:!:20682:0:99999:7:::
+daemon:*:20682:0:99999:7:::
+bin:*:20682:0:99999:7:::
+sys:*:20682:0:99999:7:::
+sync:*:20682:0:99999:7:::
+games:*:20682:0:99999:7:::
+man:*:20682:0:99999:7:::
+lp:*:20682:0:99999:7:::
+mail:*:20682:0:99999:7:::
+news:*:20682:0:99999:7:::
+uucp:*:20682:0:99999:7:::
+proxy:*:20682:0:99999:7:::
+www-data:*:20682:0:99999:7:::
+backup:*:20682:0:99999:7:::
+list:*:20682:0:99999:7:::
+irc:*:20682:0:99999:7:::
+_apt:*:20682:0:99999:7:::
+nobody:*:20682:0:99999:7:::
+systemd-network:!*:20682:::::1:
+_dhcpcd:!*:20682:::::1:
+tss:!*:20682::::::
+strongswan:!:20682::::::
+systemd-timesync:!*:20682:::::1:
+messagebus:!*:20682::::::
+tcpdump:!*:20682:::::1:
+_rpc:!:20682::::::
+statd:!:20682::::::
+sshd:!*:20682::::::
+dnsmasq:!*:20682:::::1:
+avahi:!:20682::::::
+speech-dispatcher:!*:20682::::::
+usbmux:!:20682::::::
+nm-openvpn:!*:20682:::::1:
+pipewire:!*:20682::::::
+nm-openconnect:!*:20682:::::1:
+saned:!:20682::::::
+lightdm:!:20682::::::
+polkitd:!*:20682::::::
+rtkit:!*:20682:::::1:
+colord:!*:20682::::::
+pcscd:!*:20682:::::1:
+henrique:$y$j9T$a8m5XZFPTZF4g3hNO/gdz1$YlTJAUla/ICnMX7nZGnxNhmJqryZ2p9no6H2VkXjmD7:20682:0:99999:7:::
+cups-pk-helper:!:20682::::::
+miredo:!:20682::::::
+mysql:!*:20682:::::1:
+postgres:!:20682::::::
+geoclue:!*:20682::::::
+sslh:!:20682::::::
+stunnel:!*:20682::::::
+_gophish:!:20682::::::
+iodine:!:20682::::::
+Debian-snmp:!:20682::::::
+redis:!:20682::::::
+mosquitto:!*:20682::::::
+redsocks:!:20682::::::
+inetsim:!*:20682:::::1:
+_gvm:!*:20682:::::1:
+rique:$y$j9T$6JU0CxZRBiYk.mlWQEubh.$.rmP2hcPpfSihKWaXAxgol7EpzT7wWK4fW2xY5UvmP8:20682:0:99999:7:::
+
+Se tivermos acesso a esta pasta, podemos tentar métodos de quebrar esses hashs, essa criptografia, para obter a senha de determinado usuário.
+
+=== 
+
+su: Switch User. Comando para trocarmos de usuário.
+ex:
+
+# su rique
+rique@kali /root
+
+Sendo um usuário, nao podemos mudar a senha de alguem que esta acima de nós. Veja:
+ex:
+
+# rique@kali: /root $ passwd root
+→ passwd: You may not view or modify password information for root.
+
+Mas e se usarmos "sudo" no usuario rique, sera que funciona?
+
+# rique@kali/root$ sudo passwd root
+→ [sudo] password for rique: 
+rique is not in the sudoers file.
+
+Nao funciona, pois rique nao possui permissoes para usar o comando sudo! 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</rich_text>
+  </node>
+</cherrytree>
