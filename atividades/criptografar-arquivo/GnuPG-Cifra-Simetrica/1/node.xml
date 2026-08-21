@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cherrytree>
+  <node unique_id="1" master_id="0" name="Encriptar-arquivo-cifra-simetrica-gnupg" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1787272442" ts_lastsave="1787275134">
+    <rich_text>GnuPG - Criptografia de Dados, Assinatura Digital, Gerenciamento de Chaves de Criptografia
+
+Arquivo a ser criptografado: testecripto.txt
+
+AES-256 - algoritmo padrão do GnuPG</rich_text>
+  </node>
+</cherrytree>
